@@ -1,9 +1,14 @@
 // Here is where we import modules
 // We begin by loading Express
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 
 const app = express();
+
+//dataBase
+
+require("./config/database");
 
 //middleware
 app.use(morgan("dev"));
